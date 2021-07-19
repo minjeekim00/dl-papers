@@ -1,5 +1,5 @@
 # Deep Learning Paper Reviews
-Personal record for deep learning papers
+Personal record for reviewing deep learning papers
 
 
 # Table of contents
