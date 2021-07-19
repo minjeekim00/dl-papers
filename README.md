@@ -72,11 +72,12 @@ Personal record for reviewing deep learning papers
 1. [vocoder](#vocoder)
 1. [weak supervision](#weak-supervision)
 1. [uncategorized](#uncategorized) -->
+1. [auto_encoder](#auto-encoder)
 1. [gan](#gan)
 1. [gan inversion](#gan-inversion)
 1. [memory](#memory)
-
-## GAN
-## GAN Inversion
-## Memory
+## auto-encoder
+## gan
+## gan-inversion
+## memory
 [210719 Memorizing Normality to Detect Anomaly](summaries/210719%20Memorizing%20Normality%20to%20Detect%20Anomaly:%20Memory-augmented%20Deep%20Autoencoder%20for%20Unsupervised%20Anomaly%20Detection.md)
