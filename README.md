@@ -75,11 +75,11 @@ Personal record for reviewing deep learning papers
 1. [autoencoder](#autoencoder)
 1. [gan](#gan)
 1. [gan inversion](#gan-inversion)
-1. [memory](#memory)
 1. [gaussian_mixture_models](#gaussian-mixture-models)
+1. [memory](#memory)
 ## autoencoder
-## gaussian-mixture-models
 ## gan
 ## gan-inversion
+## gaussian-mixture-models
 ## memory
 [210719 Memorizing Normality to Detect Anomaly](summaries/210719%20Memorizing%20Normality%20to%20Detect%20Anomaly:%20Memory-augmented%20Deep%20Autoencoder%20for%20Unsupervised%20Anomaly%20Detection.md)
