@@ -76,7 +76,9 @@ Personal record for reviewing deep learning papers
 1. [gan](#gan)
 1. [gan inversion](#gan-inversion)
 1. [memory](#memory)
+1. [gaussian_mixture_models](#gaussian-mixture-models)
 ## autoencoder
+## gaussian-mixture-models
 ## gan
 ## gan-inversion
 ## memory
