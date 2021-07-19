@@ -72,11 +72,11 @@ Personal record for reviewing deep learning papers
 1. [vocoder](#vocoder)
 1. [weak supervision](#weak-supervision)
 1. [uncategorized](#uncategorized) -->
-1. [auto_encoder](#auto-encoder)
+1. [autoencoder](#autoencoder)
 1. [gan](#gan)
 1. [gan inversion](#gan-inversion)
 1. [memory](#memory)
-## auto-encoder
+## autoencoder
 ## gan
 ## gan-inversion
 ## memory
