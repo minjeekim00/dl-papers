@@ -79,4 +79,4 @@ Personal record for reviewing deep learning papers
 ## GAN
 ## GAN Inversion
 ## Memory
-[210719 Memorizing Normality to Detect Anomaly](summaries/210719%20Memorizing%20Normality%20to%20Detect%20Anomaly:%20Memory-augmented%20Deep%20Autoencoder%20for%20Unsupervised%20Anomaly%20Detection)
+[210719 Memorizing Normality to Detect Anomaly](summaries/210719%20Memorizing%20Normality%20to%20Detect%20Anomaly:%20Memory-augmented%20Deep%20Autoencoder%20for%20Unsupervised%20Anomaly%20Detection.md)
