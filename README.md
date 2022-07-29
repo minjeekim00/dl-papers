@@ -78,7 +78,7 @@ Personal record for reviewing deep learning papers
 1. [gaussian_mixture_models](#gaussian-mixture-models)
 1. [memory](#memory)
 ## autoencoder
-[220728 NVAE: A Deep Hierarchical Variational Autoencoder](summaries/210719%20Memorizing%20Normality%20to%20Detect%20Anomaly:%20Memory-augmented%20Deep%20Autoencoder%20for%20Unsupervised%20Anomaly%20Detection.md)
+[220728 NVAE: A Deep Hierarchical Variational Autoencoder](summaries/210719%20Memorizing%20Normality%20to%20Detect%20Anomaly:%20Memory-augmented%20Deep%20Autoencoder%20for%20Unsupervised%20Anomaly%20Detection.md) #spectral normalization
 ## gan
 ## gan-inversion
 ## gaussian-mixture-models
