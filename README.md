@@ -89,5 +89,5 @@ Personal record for reviewing deep learning papers
 ## gan inversion
 ## gaussian mixture models
 ## vision transformer
-[220801 StyleSwin: Transformer-based GAN for High-resolution Image Generation](summaries/220801%20StyleSwin:%20Transformer-based%20GAN%20for%20High-resolution%20Image%20Generation.md)
+[220801 StyleSwin: Transformer-based GAN for High-resolution Image Generation](summaries/220801%20StyleSwin:%20Transformer-based%20GAN%20for%20High-resolution%20Image%20Generation.md) #swin
 
