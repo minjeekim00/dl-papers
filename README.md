@@ -74,17 +74,20 @@ Personal record for reviewing deep learning papers
 1. [uncategorized](#uncategorized) -->
 
 
-1. [anomaly_detection](#anomaly-detection)
+1. [anomaly detection](#anomaly-detection)
 1. [autoencoder](#autoencoder)
 1. [gan](#gan)
 1. [gan inversion](#gan-inversion)
-1. [gaussian_mixture_models](#gaussian-mixture-models)
+1. [gaussian mixture models](#gaussian-mixture-models)
+1. [vision transformer](#vision-transformer)
 
-## anomaly_detection
+## anomaly detection
 [210719 Memorizing Normality to Detect Anomaly](summaries/210719%20Memorizing%20Normality%20to%20Detect%20Anomaly:%20Memory-augmented%20Deep%20Autoencoder%20for%20Unsupervised%20Anomaly%20Detection.md) #memory
 ## autoencoder
 [220728 NVAE: A Deep Hierarchical Variational Autoencoder](summaries/220728%20NVAE:%20A%20Deep%20Hierarchical%20Variational%20Autoencoder.md) #hierarchical #spectral-regularization 
 ## gan
-## gan-inversion
-## gaussian-mixture-models
+## gan inversion
+## gaussian mixture models
+## vision transformer
+[220801 StyleSwin: Transformer-based GAN for High-resolution Image Generation](summaries/220801%20StyleSwin:%20Transformer-based%20GAN%20for%20High-resolution%20Image%20Generation.md)
 
