@@ -1,7 +1,7 @@
 Self-supervised learning in medicine and healthcare
 ===
 
-
+<aside>
 💡 Unbiased data를 해결하기 위한 유망한 self-supervised learning 기법들을 소개하고, 의료 영상에 적용됐을 때 challenge와 opportunities를 소개.
 
 - Contrastive learning vs Geneative learning
@@ -10,6 +10,8 @@ Self-supervised learning in medicine and healthcare
 - Transfer learning도 좋지만, 자연 영상의 특성이 의료 영상에 도움이 안될 수 있음
     - 따라서 self-supervised learning이 더 나은 학습방법일 수 있음.
 - Constrastive learning에 쓰일 augmentation 선정이 중요하다.
+    
+</aside>
 
 
 
