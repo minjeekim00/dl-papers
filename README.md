@@ -90,7 +90,7 @@ Personal record for reviewing deep learning papers
 ## gan inversion
 ## gaussian mixture models
 ## self supervised
-220818 Self-supervised learning in medicine and healthcare.md(summaries/220818%20Self-supervised%20learning%20in%20medicine%20and%20healthcare.md) #self-supervised
+[220818 Self-supervised Learning in Medicine and Healthcare](summaries/220818%20Self-supervised%20learning%20in%20medicine%20and%20healthcare.md) #self-supervised
 ## vision transformer
 [220801 StyleSwin: Transformer-based GAN for High-resolution Image Generation](summaries/220801%20StyleSwin:%20Transformer-based%20GAN%20for%20High-resolution%20Image%20Generation.md) #swin
 
