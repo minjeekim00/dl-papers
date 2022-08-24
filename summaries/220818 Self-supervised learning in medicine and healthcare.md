@@ -3,6 +3,7 @@ Self-supervised learning in medicine and healthcare
 
 <aside>
 💡 Unbiased data를 해결하기 위한 유망한 self-supervised learning 기법들을 소개하고, 의료 영상에 적용됐을 때 challenge와 opportunities를 소개.
+중요한 결론: augmentation이 가장 중요하다!!!
 
 - Contrastive learning vs Geneative learning
 - 모달리티: EHR, chest X-rays, electrocardiograms, protein sequence
