@@ -53,7 +53,6 @@ Personal record for reviewing deep learning papers
 1. [salient object detection](#salient-object-detection)
 1. [score_based_model](#score-based-model)
 1. [self supervised](#self-supervised)
-1. [semantic segmentation](#semantic-segmentation)
 1. [semi supervised learning](#semi-supervised-learning)
 1. [style transfer](#style-transfer)
 1. [stylegan](#stylegan)
@@ -79,18 +78,30 @@ Personal record for reviewing deep learning papers
 1. [gan](#gan)
 1. [gan inversion](#gan-inversion)
 1. [gaussian mixture models](#gaussian-mixture-models)
+1. [semantic segmentation](#semantic-segmentation)
 1. [self supervised](#self-supervised)
+1. [stylegan](#stylegan)
+1. [unsupervised representations](#unsupervised-representations)
 1. [vision transformer](#vision-transformer)
 
 ## anomaly detection
 [210719 Memorizing Normality to Detect Anomaly](summaries/210719%20Memorizing%20Normality%20to%20Detect%20Anomaly:%20Memory-augmented%20Deep%20Autoencoder%20for%20Unsupervised%20Anomaly%20Detection.md) #memory
 ## autoencoder
 [220728 NVAE: A Deep Hierarchical Variational Autoencoder](summaries/220728%20NVAE:%20A%20Deep%20Hierarchical%20Variational%20Autoencoder.md) #hierarchical #spectral-regularization 
+
 ## gan
 ## gan inversion
 ## gaussian mixture models
+## sementic segmentation
+[220831 Unsupervised Segmentation of 3D Medical Images Based on Clustering and Deep Representation Learning](summaries/220831%20Unsupervised%20Segmentation%20of%203D%20Medical%20Images%20Based%20on%20Clustering%20and%20Deep%20Representation%20Learning.md) #clustering #jule
+[220831 Segmentation of Intracranial Hemorrhage Using Semi-Supervised Multi-Task Attention-Based U-Net](summaries/220831%20Segmentation%20of%20Intracranial%20Hemorrhage%20Using%20Semi-Supervised%20Multi-Task%20Attention-Based%20U-Net.md) #attention #u-net #semi-supervised
 ## self supervised
 [220818 Self-supervised Learning in Medicine and Healthcare](summaries/220818%20Self-supervised%20learning%20in%20medicine%20and%20healthcare.md) #self-supervised
+## stylegan
+[220824 Generator Knows What Discriminator Should Learn in Unconditional GANs](summaries/220824%20Generator%20Knows%20What%20Discriminator%20Should%20Learn%20in%20Unconditional%20GANs.md) #regularization 
+[220831 Segmentation in Style: Unsupervised Semantic Image Segmentation with Stylegan and CLIP](summaries/220831%20Segmentation%20in%20Style:%20Unsupervised%20Semantic%20Image%20Segmentation%20with%20Stylegan%20and%20CLIP.md) #sementic-segmentation #clip #clustering #knowledge-distilation
+## unsupervised representations
+[220831 Joint Unsupervised Learning of Deep Representations and Image Clusters](summaries/220831%20Joint%20Unsupervised%20Learning%20of%20Deep%20Representations%20and%20Image%20Clusters.md) #jule #clustering
 ## vision transformer
 [220801 StyleSwin: Transformer-based GAN for High-resolution Image Generation](summaries/220801%20StyleSwin:%20Transformer-based%20GAN%20for%20High-resolution%20Image%20Generation.md) #swin
 
