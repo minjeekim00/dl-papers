@@ -75,23 +75,22 @@ Personal record for reviewing deep learning papers
 
 1. [anomaly detection](#anomaly-detection)
 1. [autoencoder](#autoencoder)
-1. [gan](#gan)
-1. [gan inversion](#gan-inversion)
-1. [gaussian mixture models](#gaussian-mixture-models)
-1. [semantic segmentation](#semantic-segmentation)
-1. [self supervised](#self-supervised)
-1. [stylegan](#stylegan)
-1. [unsupervised representations](#unsupervised-representations)
-1. [vision transformer](#vision-transformer)
+2. [diffusion models](#diffusion-models)
+3. [gan](#gan)
+4. [gan inversion](#gan-inversion)
+5. [gaussian mixture models](#gaussian-mixture-models)
+6. [semantic segmentation](#semantic-segmentation)
+7. [self supervised](#self-supervised)
+8. [stylegan](#stylegan)
+9. [unsupervised representations](#unsupervised-representations)
+10. [vision transformer](#vision-transformer)
 
 ## anomaly detection
 [210719 Memorizing Normality to Detect Anomaly](summaries/210719%20Memorizing%20Normality%20to%20Detect%20Anomaly:%20Memory-augmented%20Deep%20Autoencoder%20for%20Unsupervised%20Anomaly%20Detection.md) #memory
 ## autoencoder
 [220728 NVAE: A Deep Hierarchical Variational Autoencoder](summaries/220728%20NVAE:%20A%20Deep%20Hierarchical%20Variational%20Autoencoder.md) #hierarchical #spectral-regularization 
-
 ## diffusion models
 [220922 Diffusion-GAN: Training GANs with Diffusion](summaries/220922%20Diffusion-GAN:%20Training%20GANs%20with%20Diffusion.md) #diffusion
-
 ## gan
 ## gan inversion
 ## gaussian mixture models
