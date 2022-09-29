@@ -89,6 +89,9 @@ Personal record for reviewing deep learning papers
 ## autoencoder
 [220728 NVAE: A Deep Hierarchical Variational Autoencoder](summaries/220728%20NVAE:%20A%20Deep%20Hierarchical%20Variational%20Autoencoder.md) #hierarchical #spectral-regularization 
 
+## diffusion models
+[220922 Diffusion-GAN: Training GANs with Diffusion](summaries/220922%20Diffusion-GAN:%20Training%20GANs%20with%20Diffusion.md) #diffusion
+
 ## gan
 ## gan inversion
 ## gaussian mixture models
