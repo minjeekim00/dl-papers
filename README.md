@@ -99,7 +99,7 @@ Personal record for reviewing deep learning papers
 [220831 Unsupervised Segmentation of 3D Medical Images Based on Clustering and Deep Representation Learning](summaries/220831%20Unsupervised%20Segmentation%20of%203D%20Medical%20Images%20Based%20on%20Clustering%20and%20Deep%20Representation%20Learning.md) #clustering #jule  
 [220831 Segmentation of Intracranial Hemorrhage Using Semi-Supervised Multi-Task Attention-Based U-Net](summaries/220831%20Segmentation%20of%20Intracranial%20Hemorrhage%20Using%20Semi-Supervised%20Multi-Task%20Attention-Based%20U-Net.md) #attention #u-net #semi-supervised
 ## self supervised
-[220818 Self-supervised Learning in Medicine and Healthcare](summaries/220818%20Self-supervised%20learning%20in%20medicine%20and%20healthcare.md) #self-supervised
+[220818 Self-supervised Learning in Medicine and Healthcare](summaries/220818%20Self-supervised%20learning%20in%20medicine%20and%20healthcare.md) #self-supervised  
 [221117 Semantic Segmentation with Generative Models:Semi-Supervised Learning and Strong Out-of-Domain Generalization](summaries/221117%20Semantic%20Segmentation%20with%20Generative%20Models:%20Semi-Supervised%20Learning%20and%20Strong%20Out-of-Domain%20Generalization.md)
 ## stylegan
 [220824 Generator Knows What Discriminator Should Learn in Unconditional GANs](summaries/220824%20Generator%20Knows%20What%20Discriminator%20Should%20Learn%20in%20Unconditional%20GANs.md) #regularization   
