@@ -26,5 +26,12 @@
   - 학습된 D를 semantic outputs로 test time에 사용.  
 - Generator Inversion
 <b>  - 보통 Image reconstruction이나 editting을 하려고 inversion을 쓰는데, 이 논문에서는 pixel-wise image labeling을 위한 inferred embedding을 얻기 위해 쓰임. </b>
+
 - Generative Models for Image Understanding
-  -  
+  -  생성 모델로 여러가지 discriminative 하거나 image recognition task를 수행한 경우들.
+  - Missing label의 "in-painting"으로 해석할 수도 있음. (joint image-label distribution)
+  
+  
+# Method
+## Overview
+- GAN-based 
