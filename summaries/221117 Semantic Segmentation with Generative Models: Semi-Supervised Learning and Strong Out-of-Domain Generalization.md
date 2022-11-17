@@ -34,4 +34,18 @@
   
 # Method
 ## Overview
-- GAN-based 
+- image와 label의 joint distribution인 p(x, y) 합성. output은 images x, labels y 둘다 나옴.
+- given z, image and labels are conditionally independent
+- 먼저 auxiliary encoder와 테스트 시간 최적화를 통해 임베딩 z* 를 유추하여 새 이미지 x* 에 레이블을 지정할 수 있다
+- 그 후, 사응하는 pixel-wise label y* 를 얻을 수 있다.
+
+
+## Model
+- Generator: 각 style layer에 segmentation y를 output으로 하는 branch를 더한다.
+- Discriminator: Dr, Dm 두가지 사용
+  - Dr: real-synthesized image 비교하는 D
+  - Dm: real-synthesized image-mask pair 비교하는 D. image랑 mask concat해서 만듦. alignment 담당. Multi-scale patch-based D 사용.
+- Encoder and W+-space
+  -  학습기간에는 동일한 w가 모든 레이어에 적용되지만, 각 style layer를 독립적으로 모델링하는 w+ space를 사용.
+  -  Mapping images x를 곧바로 w+-space에 적용하는 encoder 학습.
+  -  Feature pyramid network based로 multi-level feature를 추출한다.
