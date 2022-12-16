@@ -1,0 +1,4 @@
+- GAN과 Unet을 이용하여 MR image를 auto-segmantation. Atlas-based segmentation과 비교.
+- 2.5D + random patch of multiple slices vs 3D 학습 비교
+- G는 입력 이미지를 받아 U-Net으로 segmentation 이미지를 뱉어냄.
+- D는 FCN으로 구성되어 실제 segmentation과 비교함.
