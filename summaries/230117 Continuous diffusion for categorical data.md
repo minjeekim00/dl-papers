@@ -21,7 +21,7 @@
 
 
 # Deffusion models
-- # Diffusion for discrete data
+### Diffusion for discrete data
 1. 비슷한 iterative refinement 과정을 정의한다.
 2. 연속 space에 embedding하여 embedding에 continous diffusion을 적용한다. => 후자 이용
 - 이점 1: classifier-free guidance 등 특성 이용가능
@@ -35,7 +35,7 @@
 - Diffusion model에서는 '고빈도 콘텐츠'의 개념이 의미가 없기 때문에 이미지 모델에서 용이함(?). 
 - 마지막으로 생성적 모델링 성능에 대한 임베딩 절차 선택의 영향도 고려해야함.
 
-- # Diffusion and autoregression
+### Diffusion and autoregression
 - Token sequence를 sequential condition으로 인수분해: 샘플링은 항상 sequence 방향으로 이루어짐.
 - 여기서 "Sampling"은 "Iterative refinement"로 볼 수 있음
 - 1D squence를 표현하기에 가장 적합
@@ -43,4 +43,32 @@
 (diffusion은 보통 single noise level로 모든 training example을 학습하기 때문에)
 - 이점 1: Sampling time에서 이전 모델의 activation을 caching할 수 있음
 - 이점 2: Diffusion model은 각 step에서 전체 forward pass가 필요하므로 비용이 더 많이 든다.
+
+# The CDCD framework
+- Categorical cross entropy loss를 사용한 diffusion model training 소개 (w/ score interpolation)
+- Noise level의 분포를 자동 적용하는 active learining strategy - time warping 소개
+
+### Score interpolation
+- Diffusion model은 보통 score matching objective를 최소화한다
+- 데이터가 discrete하거나 categorical하면 (e.g. 사이즈 V인 단어에서 추출된 token) conditional score function s(x,𝑡|x0)만이 추정 가능하다.
+- 따라서, x0의 확률적 예측이 있는 경우, 이를 사용하여 𝑉 가능한 값을 interpolate하여 score function estimates을 얻을 수 있음
+- V logits을 예측하기 위해 softmax nonlinearity 사용 가능. 
+- Auto-regressive language model을 학습하는 설정과 비슷.
+
+### Diffusion on embeddings
+- Continuous space에 input embedding하기.
+1. 임의의 embedding을 다른 token에 assign한다.
+2. Representation learning을 이용하여 embedding을 얻는다.
+=> <b> 이 논문에서는 embedding과 diffusion 모델을 jointly 학습한다. (diffusion model에서 reparameterization trick 사용)</b>
+- Score matching을 사용한 diffusion model은 embedding space가 collapse 됐을 것.
+- Why? noise 예측때문에 embedding 예측은 사소해짐. Collapse 방지를 위해서는 추가적인 loss condition이 필요함.
+- Score interpolation를 사용하여 diffusion model을 cross-entropy loss로 사용 가능.
+- 목적 함수는 이제 실제 임베딩을 다른 모든 임베딩과 구별하는 것이므로 노이즈 임베딩이 입력으로 주어지면 모델은 임베딩을 가능한 한 멀리 밀어내도록 권장됨
+(이렇게 하면 노이즈의 혼란스러운 영향이 최소화됨).
+- embedding이 너무 많아지는 것을 제한해야함. -> embedding vector를 normalize하기. (L2)
+- embedding estimate도 score estimate하기 L2-normalization함 (renoramlization)
+- 다른 방법으로는 nearest embedding vector를 clamp할 수 있음.
+
+### Time warping
+
 
