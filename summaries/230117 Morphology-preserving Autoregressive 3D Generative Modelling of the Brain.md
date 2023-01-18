@@ -1,4 +1,4 @@
-VQ-VAE + Transformer
+3D image generation. VQ-VAE(3D) + Transformer(flattened 1D sequence)
 
 
 # Background
@@ -15,7 +15,7 @@ VQ-VAE + Transformer
 - 트랜스포머 모델과 관련된 self-attention 메커니즘은 상대적 위치에 관계없이 입력 간의 상호 작용을 캡처할 수 있다.
 - VQ-VAE의 latent discrete representation은 3D이므로 규모가 크므로, 일반적인 transformer는 필요한 시퀀스 길이로 확장되지 못한다.
 - 따라서 Performer를 사용하여 latent sequence를 모델링한다. 
-- 3D latent discrete representations의 flattened 1D sequence에서 코드북 인덱스 p(s)의 조건부 분포를 최소화함으로써 데이터 로그 우도가 auto-regression 방버으로 최대화된다.
+- 3D latent discrete representations의 flattened 1D sequence에서 코드북 인덱스 p(s)의 조건부 분포를 최소화함으로써 데이터 로그 우도가 auto-regression 방법으로 최대화된다.
 -
 # Method
 ### Descriptive Quantization for Transformer Usage
