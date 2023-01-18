@@ -1,1 +1,5 @@
-
+- **3D + latent diffusion**
+- Autoencoder
+- L1 loss + perceptual loss + patch-based gan loss + KL regularization
+- 160 x 224 x 160 → 20 x 28 x 20
+- Cross-attention 매커니즘으로 conditioning
