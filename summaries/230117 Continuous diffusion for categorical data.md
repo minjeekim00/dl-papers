@@ -70,5 +70,16 @@
 - 다른 방법으로는 nearest embedding vector를 clamp할 수 있음.
 
 ### Time warping
+- Diffusion model은 shared parameter에서 single set의 다양한 노이즈 레벨에서 작동하는 denoiser이다.
+- 따라서 모델이 다양한 노이즈 레벨에 대한 capacity를 할당하는 정도는 결과 샘플의 인지 품질에 상당한 영향을 미친다.
+- => 학습시 노이즈 레벨의 가중치를 대략화하여 컨트롤할 수 있다.
+- Cross-entropy loss를 사용하면 각 timestep에서 노이즈레벨 가중치가 상대적으로 바뀐다.
+- *Importance sample* 으로 구현가능. - 원하는 상대적 가중치에 상응하는 density를 가진 non-uniform 분포에서 샘플하면됨.
+- => *Inverse transform sampling*. 구현을 위해 다음을 사용
 
+***The entropy of the model predictions should increase linearly as a function of F(t).
+- 모델 예측의 불확실성은 uniform time function에 상수 비율로 증가한다.
+- 따라서 모델의 용량은 입력 시퀀스의 정보 내용 전체에 고르게 분포되어야 합니다.(??)
+- 또한, 모델에서 샘플링할 때 균일한 시간에 동일한 간격의 시간 단계를 사용하면 거의 일정한 속도로 불확실성이 점진적 감소한다.
 
+- Active learning 전략처럼 초기에는 노이즈 레벨이 균등하게 샘플되지만, 학습이 진행되며 노이즈 레벨 분포가 학습에 가장 유용한 방향의 레벨로 attention 된다.
