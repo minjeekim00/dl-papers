@@ -46,4 +46,20 @@
   - VDM: images와 videos가 interchangebly 학습하기 위해서, 2D U-Net을 unflattened 1x3x3 conv filter를 사용하여 3D로 확장.
   - 연속적인 spatial attention은 2D에 남아있으면서, 1D temporal attention은 relative position embedding을 통해 추가됨.
 - 반면에, 이 논문에서는 각 1x3x3 이후 3x1x1 conv projection을 추가해서 temporal 정보가 각 conv 레이어에 통과하도록 함.
-- 
+##### Frame rate conditioning
+- T2I conditioning 외에도, CogVideo와 비슷하게, 우리는 conditioning parameter fps를 추가한다. - 생성된 비디오의 fps 넘버를 나타냄
+- 다양한 넘버의 fps를 컨디셔닝하면 추가로 augmentation을 할 수 있다. (비디오 데이터의 한계가 있지만 다양한 만들어낼 수 있음)
+
+### Frame Interpolation 네트워크
+- 새로운 Masked frame interpolation과 extrapolation 네트워크를 학습한다.
+- 생성된 비디오의 프레임 수를 증가시키거나 frame interpolation으로 더 부드러운 비디오를 생성하거나 pre/post frame extrapolation으로 비디오 길이를 증가한다.
+- 메모리 및 컴퓨팅 제약 내에서 프레임 속도를 높이기 위해 마스킹된 입력 프레임을 `zero padding` 한다.
+- 비디오 업샘플링을 활성화하여 마스킹된 프레임 interpolation에서 Spatio-temporal decoder Dt를 파인튜닝한다.
+- U-Net의 입력에 4 channel을 추가로 준다: 3 channel for RGB, + 어느 프레임이 마스크 됬는지에 대한 binary channel 
+- 16 프레임부터 76 프레임 ((16-1)x5+1) 5 프레임 스킵
+
+### Training
+- Image embedding을 input으로 받기 때문에, super-resolution 컴포넌트는 다운샘플된 이미지를 input으로 받는다.
+- 16 프레임이 원래 비디오에서 샘플되고, 1~30까지 랜덤 fps로 샘플링된다.
+- 높은 FPS (less motion)에서 시작해서 낮은 FPS (more motion)으로 transition한다.
+- Maksed-frame-interpolation 컴포넌트는 temporal decoder 후에 파인튜닝 된다.
