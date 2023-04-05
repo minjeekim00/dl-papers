@@ -32,7 +32,7 @@
 2) Diffusion 모델의 inductive bias를 Unet으로부터 물려받는다 -> spatial structure
 3) Downstream application에 사용 가능한 multiple generative models 학습 가능.
 
-### Perceptual Image Compression
+## Perceptual Image Compression
 - Taming transformer + Autoencoder(perceptual loss + patch-based adversarial objective)
   - 이는 Reconstruction이 true image manifold에만 국한됨. (??) (local realism을 강요)
   - L2 또는 L1 objective와 같이 pixel space loss에만 의존하면 bluriness가 발생하는데, 이를 방지할 수 있다.
@@ -42,13 +42,13 @@
 - 이후에 학습되는 DM은 학습된 잠재 공간 z = E(x)의 2차원 구조와 함께 작동하도록 설계되었기 때문에 비교적 완만한 압축률을 사용해도 매우 우수한 reconstruction을 달성할 수 있다.
 - 기존에는 학습된 공간 z의 임의의 1D 순서에 의존하여 분포를 auto-regressive하게 모델링하여 z의 고유한 구조가 무시됐었음.
 
-### Latent Diffusion Models
-#### Diffusion Models
+## Latent Diffusion Models
+### Diffusion Models
 - T길이의 고정된 Markov Chain의 reverse process를 학습.
 - 이미지 생성에서 성공한 모델들은 variational lower bound의 reweighted variant에 의존. :denoising score-matching.
   - 이러한 모델들은 denoising autoencoder의 equally weighted sequence로 해석된다.
   - 입력 x_t의 denoised variant를 예측하는 것을 학습하고, x_t는 x의 noisy 버전이다.
-#### Generative Modeling of Latent Representations
+### Generative Modeling of Latent Representations
 - Perceptual compression 모델로 이제 high-frequency이면서, 감지할 수 없는 디테일이 추상화되는 효율적이고 저차원의 latent space가 학습됨.
 - 고차원의 pixel space에 비교해서, 이 공간은 좀더 likelihood-based 생성 모델에 적합하다.
 - 이제 1) 중요하고, semantic한 데이터 bits에 집중 가능. 2) 낮은 차원에 학습으로 계산적으로 매우 효율적인 공간이다.
@@ -56,7 +56,7 @@
   - 2D Conv로 구성된 기본 UNet을 구축할 수 있음 + reweighted bound를 사용하여 지각적으로 가장 관련성이 높은 bits에 objective를 추가로 집중시킴.
 - Backbone은 time-conditional Unet.
 
-#### Conditioning Mechanisms
+### Conditioning Mechanisms
 - 다른 생성 모델들 처럼 conditional training 가능.
 - Conditional denoising autoencoder를 통해 구현됨. (text, semantic maps, .. image-to-image translation 등)
 - Cross-attention mechanism을 증강하여 구현.
