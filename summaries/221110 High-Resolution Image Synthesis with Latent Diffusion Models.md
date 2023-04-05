@@ -58,4 +58,8 @@
 
 #### Conditioning Mechanisms
 - 다른 생성 모델들 처럼 conditional training 가능.
-- 
+- Conditional denoising autoencoder를 통해 구현됨. (text, semantic maps, .. image-to-image translation 등)
+- Cross-attention mechanism을 증강하여 구현.
+- 다양한 모달리티의 y를 전처리 하기 위해, y를 중간 representation으로 투영하는 domain specific encoder를 소개한다.
+  - cross-attention를 통해 UNet의 중간 레이어에 maaping을 한다.
+  - UNet의 flattened intermediate representation를 통해 구현한다.
