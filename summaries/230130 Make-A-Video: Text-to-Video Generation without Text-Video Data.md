@@ -7,22 +7,26 @@
 - CogVideo: 사전학습 및 고정된 T2I 모델의 작은 부분만 trainable parameter로 만들어 메모리 감소 (T2V generation)
   - 고정된 오터인코더와 T2I 모델은 T2V 생성이 제한적일 수 있음
 
+# Introduction
+- 새로운 모델은 temporal information을 담고있음.
+  - 이렇게 확장된 spatial-temporal network는 temporal dynmiacs를 배우는 new attention module을 가지고 있다.
+- 영상 품질을 위해 spatial super-resolution과 frame interpolation도 수행. (super resolution을 space-time 모두에 적용)
 
 # Method
 1. T2I 모델
 2. Spatio-temporal convolution + attention layer
-3. Frame interpoliation 네트워크
+3. Frame interpolation 네트워크
 
 ### Text-To-Image 모델
-- P: 주어진 텍스트 임베딩을 받아 이미지 임베딩을 생성, BPE로 text token 인코드
-- D: 이미지 임베딩에서 저해상도의 64 x 64 이미지를 만들어냄.
-- SR/SR: 두 개의 super-resolution 네트워크. 256 x 256 => 768 x 768
+- Prior network P: 주어진 text embeddings + BPE encoded text token 으로 image embedding 생성
+- Decoder network D: image embedding을 condition으로한 64x64 RGB 이미지 생성.
+- SR/SR: 두 개의 super-resolution 네트워크. 64 x 64 => 256 x 256 => 768 x 768
 
 ### Spatio-Temporal 레이어
-- 2D network를 temporal dimension으로 확장하기 위해 두가지를 사용한다:
+- 2D network를 temporal dimension으로 확장하기 위해 두 가지를 사용한다:
 1) Conv layer. 2) Attention layers.
-- FC와 같은 다른 레이어들은 structured 공간/시간 정보가 없기 때문에 차원을 더하는 것은 쉽다.
-- Temporal 변형: U-Net-based diffusion network에서 대부분 사용, spatio-temporal decoder D가 16 RGB Frame (64 x 64) 생성
+- <Temporal 변형>
+- U-Net-based diffusion network에서 대부분 사용, spatio-temporal decoder D가 16 RGB Frame (64 x 64) 생성
 - Super resolution에는 hallucination이 포함된다. 아티팩트가 깜박이지 않도록 하려면 hallucination이 프레임 전체에서 일관되어야 합니다. (??)
 - 결론적으로, SR 모듈이 spatial, temporal에 걸쳐 작동된다.
 
