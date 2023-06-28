@@ -1,6 +1,5 @@
 Key points:
-- 3D 생성을 위해 condition으로 mask, slice indices, condition sub-volume을 잘 활용한 논문.  
-
+- 3D 생성을 위해 condition으로 mask, slice indices, condition sub-volume을 잘 활용한 논문.
 - conditon / target을 같이 학습하되 binary mask encoding으로 둘을 구분한다
 - slice index 사이의 distance로 attention weight를 계산하여 활용
   => random sampling으로 연속 시퀀셜보다 더 많은 조합 생성가능 + long-range dependency
