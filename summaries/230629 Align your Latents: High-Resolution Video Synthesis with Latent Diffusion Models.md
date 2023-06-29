@@ -1,6 +1,6 @@
-<b> Temporal 하게 consistent함을 강제 </b>
-<b> Alignment layer</b>
-<b> 3D로 학습됨, AE에서 decoder에만 temporal layer 추가
+<b> Temporal 하게 consistent함을 강제 
+ Alignment layer
+ 3D로 학습됨, AE에서 decoder에만 temporal layer 추가 </b>
 
 
 # Abstract
