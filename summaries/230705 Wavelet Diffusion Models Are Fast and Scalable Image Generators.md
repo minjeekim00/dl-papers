@@ -1,4 +1,5 @@
-- 요약: wavelet-based diffusion을 이용하여 sampling 시간을 개선.
+- 요약: Diffusion GAN에 wavelet scheme을 적용하여 sampling 시간을 개선했다.
+- RGB 이미지를 4개의 wavelet subband로 분해하여 concat한 이미지 (12, h/2, w/2)를 사용
 - Low-freq에서 뽑히는 intermediate feature representations, High-freq의 detail을 모두 잡았음.
 
 
