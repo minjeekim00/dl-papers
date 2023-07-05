@@ -1,4 +1,5 @@
-- 요약: wavelet-based diffusion을 이용하여 sampling 시간을 개선.  
+- 요약: wavelet-based diffusion을 이용하여 sampling 시간을 개선.
+- Low-freq에서 뽑히는 intermediate feature representations, High-freq의 detail을 모두 잡았음.
 
 
 # Related Work
@@ -19,7 +20,7 @@
 - Diffusion GAN에서는 large step을 multimodal 분포로 모델링하는데, 이 때 GAN을 사용한다 (분포학습하는것에 GAN을 사용)
 - Diffusion GAN는 conditional generator ($x_t$가 주어졌을 때 $x_{t-1}$)을 사용하여 가짜샘플을 생성한다.
 
--------------------------------------------------------------------------------------------------여기서부턴 네트워크 설명
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------여기서부턴 네트워크 설명
 # Method
 ## Wavelet-based diffusion scheme
 - 이미지를 4개의 wavelet subband로 분해한 후 denoising process을 위해 하나로 concat한다. => wavelet spectrum에서 학습됨
