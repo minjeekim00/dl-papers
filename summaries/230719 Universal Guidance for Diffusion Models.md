@@ -50,10 +50,21 @@
 - 따라서 noisy한 이미지가 아닌 predicted clean 데이터 포인트를 사용.
   
 ## 3.2 Backward Universal Guidance
-- 
+- Backward guidance는 Forward guidance가 생성된 이미지가 constraint에 만족하도록 돕는 역할.  
+  (Forward guidance만 사용할 경우, "진짜 같음"이 우선시되어 프롬프트와 맞지 않는 결과가 나왔다.)
+- Guidance strength를 더 줘서 고쳐보려 했지만, denoiser보다 manifold에서 더 빨리 이동하기때문에 불안정성이 발생한다.
+- !!!중요 아이디어는 클린 이미지를 프롬프트에 최적화 시킨 다음, 각 스텝에서 forward가 guide한 cahnge를 다시 노이지 이미지로 linearly 하게 바꾸는 것이다.
 
+- "forward" 및 "backward"라는 이름은 정방향 및 역방향 Euler methods와 유사하여 사용됨.
 
 ## 3.3 Per-step Self-recurrence
+- "진짜 같음"과 "guidance 제약조건 만족"은 항상 같이 존재하지 않음.
+- 이 논문에서 제안한 guidance direction이 guidance function에 너무 많은 정보손실이 있을 경우에는 이미지의 진짜같음과 relate되지 않음.
+- 이미지 샘플링 trajectory로 부터 이미지를 잃어버릴 수 있음. => per-step self-recurrence를 이용하여 해결.
+- 구체적으로, $z_{t−1} =S(z_t , \hat ϵ_t , t)$ 가 샘플 됐을 때, 가우시안 노이즈를 다시 넣어서 $z'_t$를 얻는다. (적당한 노이즈를 추가)
+- 이러한 self-recurrence를 각 스텝마다 k times 반복한다.
+- 직관적으로, self-recurrence는 데이터 매니폴드의 같은 노이즈 스케일의 다른 영역들을 탐험하게 된다. -> guidance / image quality 모두 만족하는 해결책을 찾을 확률 높음.
+- 
 
 
 
