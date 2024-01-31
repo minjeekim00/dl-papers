@@ -4,5 +4,5 @@
 - 이러한 descriptor를 사용하면 추가 큐를 얻을 수 있음. - 이 과정에서 결정하는 과정을 볼 수 있음 
 
 
-  # Introduction
-  - 랭귀지를 시각적 인식을 위한 내부적 representation으로 사용할 수 있다.
+# Introduction
+- 랭귀지를 시각적 인식을 위한 내부적 representation으로 사용할 수 있다.
