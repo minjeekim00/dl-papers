@@ -7,4 +7,6 @@
 - MedCLIP: rule-based 레이블러를 이용하기 때문에 레이블러의 성능에 의존함.
 - DeCLIP: CXR 스터디에서 여러개의 이미지와 텍스트를 이용하는 multi-view supervision (MVS)를 사용하여 효율적인 학습.
 - 각각에 image / text - contrastive loss (ICL/TCL) 적용
-- 
+
+# Method
+- image-text 쌍뿐만 아니라 image-label 쌍도 샘플링하며, 한 스터디당 2개의 이미지와 2개의 텍스트를 사용.
