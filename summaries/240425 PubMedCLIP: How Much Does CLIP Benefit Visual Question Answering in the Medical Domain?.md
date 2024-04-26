@@ -15,4 +15,7 @@
 - 그냥 CLIP과 비교했을 때 embedding이 훨씬 더 뭉쳐있음
 
 # PubMedCLIP for MedVQA
-- 
+- v, q가 주어졌을 때 a를 잘 맞추는 작업
+- 그 다음, MedVQA를 multi-label 분류로 캐스팅한다.
+- PubMedCLIP + CDAE 인코더의 출력을 concat하여 visual feature를 만든다
+- Multimodal pooling에는 2개의 CNN 레이어+Relu를 사용
